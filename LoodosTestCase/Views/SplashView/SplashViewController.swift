@@ -15,8 +15,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Splash Loaded")
-        print(viewModel.temp)
+        print(viewModel.fetchKeyFromConfig())
         // Do any additional setup after loading the view.
     }
 

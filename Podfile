@@ -4,9 +4,13 @@
 target 'LoodosTestCase' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  
+  # Firebase Pods
 	pod 'Firebase/Analytics'
-
-
-  # Pods for LoodosTestCase
+  pod 'Firebase/RemoteConfig'
+  
+  # Structure Pods
+  
+  # Visual Pods
 
 end

@@ -9,5 +9,8 @@ import Foundation
 
 class SplashViewModel {
     
-    var temp = "Temp Var"
+    func fetchKeyFromConfig() -> String {
+        let remoteConfig = RemoteConfigManager()
+        return remoteConfig.fetchStringValue(with: "SplashScreenKey") ?? ""
+    }
 }
