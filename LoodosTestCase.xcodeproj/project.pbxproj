@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222565D3BF156F0F0BF8E41D /* Pods_LoodosTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35548390DA66A429CD4F12B0 /* Pods_LoodosTestCase.framework */; };
 		2C4B724D27EC71890055B1F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B724C27EC71890055B1F8 /* AppDelegate.swift */; };
 		2C4B725627EC718D0055B1F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B725527EC718D0055B1F8 /* Assets.xcassets */; };
 		2C4B725927EC718D0055B1F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B725727EC718D0055B1F8 /* LaunchScreen.storyboard */; };
 		2C4B726927EC73E70055B1F8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B726727EC73E70055B1F8 /* SplashViewController.swift */; };
 		2C4B726A27EC73E70055B1F8 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B726827EC73E70055B1F8 /* SplashViewController.xib */; };
 		2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */; };
+		2C4B726E27EC77390055B1F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		2C4B726727EC73E70055B1F8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2C4B726827EC73E70055B1F8 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35548390DA66A429CD4F12B0 /* Pods_LoodosTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4258D0018EF5CD5AB55545A /* Pods-LoodosTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosTestCase.debug.xcconfig"; path = "Target Support Files/Pods-LoodosTestCase/Pods-LoodosTestCase.debug.xcconfig"; sourceTree = "<group>"; };
+		F090AC0D4412B037E62EDCA6 /* Pods-LoodosTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosTestCase.release.xcconfig"; path = "Target Support Files/Pods-LoodosTestCase/Pods-LoodosTestCase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222565D3BF156F0F0BF8E41D /* Pods_LoodosTestCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C53D9C2CC4FF0A337DD3053 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35548390DA66A429CD4F12B0 /* Pods_LoodosTestCase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E7D8FC5D5E3D745A371C235 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4258D0018EF5CD5AB55545A /* Pods-LoodosTestCase.debug.xcconfig */,
+				F090AC0D4412B037E62EDCA6 /* Pods-LoodosTestCase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2C4B724027EC71890055B1F8 = {
 			isa = PBXGroup;
 			children = (
 				2C4B724B27EC71890055B1F8 /* LoodosTestCase */,
 				2C4B724A27EC71890055B1F8 /* Products */,
+				1E7D8FC5D5E3D745A371C235 /* Pods */,
+				0C53D9C2CC4FF0A337DD3053 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +96,7 @@
 			children = (
 				2C4B724C27EC71890055B1F8 /* AppDelegate.swift */,
 				2C4B725A27EC718D0055B1F8 /* Info.plist */,
+				2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -130,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C4B725D27EC718D0055B1F8 /* Build configuration list for PBXNativeTarget "LoodosTestCase" */;
 			buildPhases = (
+				C0ED36F1891927BDD0B60598 /* [CP] Check Pods Manifest.lock */,
 				2C4B724527EC71890055B1F8 /* Sources */,
 				2C4B724627EC71890055B1F8 /* Frameworks */,
 				2C4B724727EC71890055B1F8 /* Resources */,
+				694023BBB952D1F6816F30F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,12 +212,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4B725927EC718D0055B1F8 /* LaunchScreen.storyboard in Resources */,
+				2C4B726E27EC77390055B1F8 /* GoogleService-Info.plist in Resources */,
 				2C4B726A27EC73E70055B1F8 /* SplashViewController.xib in Resources */,
 				2C4B725627EC718D0055B1F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		694023BBB952D1F6816F30F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosTestCase/Pods-LoodosTestCase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosTestCase/Pods-LoodosTestCase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoodosTestCase/Pods-LoodosTestCase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0ED36F1891927BDD0B60598 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoodosTestCase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C4B724527EC71890055B1F8 /* Sources */ = {
@@ -332,6 +405,7 @@
 		};
 		2C4B725E27EC718D0055B1F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4258D0018EF5CD5AB55545A /* Pods-LoodosTestCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -351,6 +425,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cankiran.LoodosTestCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -361,6 +439,7 @@
 		};
 		2C4B725F27EC718D0055B1F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F090AC0D4412B037E62EDCA6 /* Pods-LoodosTestCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -380,6 +459,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cankiran.LoodosTestCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
