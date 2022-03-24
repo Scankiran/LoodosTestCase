@@ -33,6 +33,10 @@ class SplashViewController: UIViewController {
             self?.setDataToLabel(text: textData)
         }
         
+        viewModel.openMainViewController = { [weak self] () in
+            self?.openMainViewController()
+        }
+        
         fetchDataFromConfig()
     }
 
@@ -52,9 +56,15 @@ private extension SplashViewController {
     func showErrorAlert(alertMessage: String) {
         let alert = UIAlertController(title: "Error!", message: alertMessage, preferredStyle: .alert)
         
-        alert.addAction(.init(title: "Okey", style: .cancel, handler: { _ in
-            self.fetchDataFromConfig()
+        alert.addAction(.init(title: "Okey", style: .cancel, handler: { [weak self] _ in
+            self?.fetchDataFromConfig()
         }))
         self.present(alert, animated: true)
+    }
+    
+    func openMainViewController() {
+        let viewController = MainViewController()
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
     }
 }
