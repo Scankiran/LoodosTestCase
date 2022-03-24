@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2C4B724D27EC71890055B1F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B724C27EC71890055B1F8 /* AppDelegate.swift */; };
-		2C4B724F27EC71890055B1F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B724E27EC71890055B1F8 /* SceneDelegate.swift */; };
-		2C4B725127EC71890055B1F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B725027EC71890055B1F8 /* ViewController.swift */; };
-		2C4B725427EC718A0055B1F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B725227EC71890055B1F8 /* Main.storyboard */; };
 		2C4B725627EC718D0055B1F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B725527EC718D0055B1F8 /* Assets.xcassets */; };
 		2C4B725927EC718D0055B1F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B725727EC718D0055B1F8 /* LaunchScreen.storyboard */; };
+		2C4B726927EC73E70055B1F8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B726727EC73E70055B1F8 /* SplashViewController.swift */; };
+		2C4B726A27EC73E70055B1F8 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B726827EC73E70055B1F8 /* SplashViewController.xib */; };
+		2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C4B724927EC71890055B1F8 /* LoodosTestCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosTestCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4B724C27EC71890055B1F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C4B724E27EC71890055B1F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C4B725027EC71890055B1F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C4B725327EC71890055B1F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C4B725527EC718D0055B1F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4B725827EC718D0055B1F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4B725A27EC718D0055B1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C4B726727EC73E70055B1F8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		2C4B726827EC73E70055B1F8 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,71 @@
 		2C4B724B27EC71890055B1F8 /* LoodosTestCase */ = {
 			isa = PBXGroup;
 			children = (
-				2C4B724C27EC71890055B1F8 /* AppDelegate.swift */,
-				2C4B724E27EC71890055B1F8 /* SceneDelegate.swift */,
-				2C4B725027EC71890055B1F8 /* ViewController.swift */,
-				2C4B725227EC71890055B1F8 /* Main.storyboard */,
-				2C4B725527EC718D0055B1F8 /* Assets.xcassets */,
-				2C4B725727EC718D0055B1F8 /* LaunchScreen.storyboard */,
-				2C4B725A27EC718D0055B1F8 /* Info.plist */,
+				2C4B726027EC72BA0055B1F8 /* App */,
+				2C4B726227EC72F60055B1F8 /* Data */,
+				2C4B726127EC72E10055B1F8 /* Resource */,
+				2C4B726327EC73270055B1F8 /* Views */,
 			);
 			path = LoodosTestCase;
+			sourceTree = "<group>";
+		};
+		2C4B726027EC72BA0055B1F8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B724C27EC71890055B1F8 /* AppDelegate.swift */,
+				2C4B725A27EC718D0055B1F8 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2C4B726127EC72E10055B1F8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B725527EC718D0055B1F8 /* Assets.xcassets */,
+				2C4B725727EC718D0055B1F8 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2C4B726227EC72F60055B1F8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2C4B726327EC73270055B1F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B726627EC73880055B1F8 /* MovieDetailView */,
+				2C4B726527EC737C0055B1F8 /* MainView */,
+				2C4B726427EC73760055B1F8 /* SplashView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C4B726427EC73760055B1F8 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */,
+				2C4B726727EC73E70055B1F8 /* SplashViewController.swift */,
+				2C4B726827EC73E70055B1F8 /* SplashViewController.xib */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		2C4B726527EC737C0055B1F8 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		2C4B726627EC73880055B1F8 /* MovieDetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieDetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4B725927EC718D0055B1F8 /* LaunchScreen.storyboard in Resources */,
+				2C4B726A27EC73E70055B1F8 /* SplashViewController.xib in Resources */,
 				2C4B725627EC718D0055B1F8 /* Assets.xcassets in Resources */,
-				2C4B725427EC718A0055B1F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4B725127EC71890055B1F8 /* ViewController.swift in Sources */,
+				2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */,
 				2C4B724D27EC71890055B1F8 /* AppDelegate.swift in Sources */,
-				2C4B724F27EC71890055B1F8 /* SceneDelegate.swift in Sources */,
+				2C4B726927EC73E70055B1F8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C4B725227EC71890055B1F8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C4B725327EC71890055B1F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C4B725727EC718D0055B1F8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,12 +339,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoodosTestCase/Info.plist;
+				INFOPLIST_FILE = LoodosTestCase/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +355,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,12 +368,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoodosTestCase/Info.plist;
+				INFOPLIST_FILE = LoodosTestCase/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
