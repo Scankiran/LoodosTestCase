@@ -16,6 +16,7 @@
 		2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */; };
 		2C4B726E27EC77390055B1F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */; };
 		2CF25D8227ED07A100277678 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */; };
+		2CF25D8727ED134A00277678 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8627ED134A00277678 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
+		2CF25D8627ED134A00277678 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		35548390DA66A429CD4F12B0 /* Pods_LoodosTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4258D0018EF5CD5AB55545A /* Pods-LoodosTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosTestCase.debug.xcconfig"; path = "Target Support Files/Pods-LoodosTestCase/Pods-LoodosTestCase.debug.xcconfig"; sourceTree = "<group>"; };
 		F090AC0D4412B037E62EDCA6 /* Pods-LoodosTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosTestCase.release.xcconfig"; path = "Target Support Files/Pods-LoodosTestCase/Pods-LoodosTestCase.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2CF25D8027ED079400277678 /* Firebase */,
+				2CF25D8327ED0F2300277678 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -159,6 +162,14 @@
 				2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2CF25D8327ED0F2300277678 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2CF25D8627ED134A00277678 /* Reachability.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 				2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */,
 				2CF25D8227ED07A100277678 /* RemoteConfigManager.swift in Sources */,
 				2C4B724D27EC71890055B1F8 /* AppDelegate.swift in Sources */,
+				2CF25D8727ED134A00277678 /* Reachability.swift in Sources */,
 				2C4B726927EC73E70055B1F8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,8 +10,8 @@ import FirebaseRemoteConfig
 
 class RemoteConfigManager {
     
-    let settings: RemoteConfigSettings
-    let remoteConfig: RemoteConfig
+    private let settings: RemoteConfigSettings
+    private let remoteConfig: RemoteConfig
     
     init() {
         settings = RemoteConfigSettings()

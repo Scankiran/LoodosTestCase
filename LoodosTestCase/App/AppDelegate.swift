@@ -28,9 +28,9 @@ private extension AppDelegate {
 
     func loadAndShowSplashView() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = UINavigationController(rootViewController: SplashViewController())
+        let splashViewController = SplashViewController()
         
-        window.rootViewController = navigationController
+        window.rootViewController = splashViewController
         window.makeKeyAndVisible()
         self.window = window
     }
