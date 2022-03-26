@@ -5,11 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="LoodosTestCase" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="GQR-Bl-n1G" id="ltf-zn-bkZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +19,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GQR-Bl-n1G">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GQR-Bl-n1G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Sk-yF-lB7"/>
+                <constraint firstItem="GQR-Bl-n1G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f7H-dr-AG8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GQR-Bl-n1G" secondAttribute="trailing" id="gQo-VI-920"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GQR-Bl-n1G" secondAttribute="bottom" id="nZi-9T-ZJZ"/>
+            </constraints>
             <point key="canvasLocation" x="133" y="76"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

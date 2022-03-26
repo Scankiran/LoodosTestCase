@@ -9,12 +9,12 @@ import Foundation
 
 class MainViewModel {
  
-    let temp = "Temp text"
+    var sendDataToView: (([BaseFilmModel]) -> ())?
     
     func searchFilm(with text:String) {
         let network = FilmAPINetwork()
-        network.searchFilm(with: text) { filmData in
-            print(filmData)
+        network.searchFilm(with: text) { [weak self] filmData in
+            self?.sendDataToView?(filmData.search)
         }
     }
 }
