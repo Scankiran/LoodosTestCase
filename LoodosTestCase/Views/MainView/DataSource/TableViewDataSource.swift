@@ -8,11 +8,17 @@
 import UIKit
 import FirebaseAnalytics
 
+protocol TableViewDataSourceOutputDelegate: AnyObject {
+    func openMovieDetailPage(with imdbID:String)
+}
+
 class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     private var baseMovieModelData: [BaseMovieModel] = []
+    private weak var outputDelegate: TableViewDataSourceOutputDelegate? = nil
 
-    override init() {
+    init(outputDelegate: TableViewDataSourceOutputDelegate) {
+        self.outputDelegate = outputDelegate
     }
 
     func updateDataSource(baseMovieModelData: [BaseMovieModel]) {
@@ -45,7 +51,7 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
 // MARK: BaseMovieInformationCellOutputDelegate
 extension TableViewDataSource: BaseMovieInformationCellOutputDelegate {
     func cellTapped(movieID: String) {
-
+        self.outputDelegate?.openMovieDetailPage(with: movieID)
     }
     
     

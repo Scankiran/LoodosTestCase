@@ -9,5 +9,17 @@ import Foundation
 
 class MovieDetailViewModel {
     
-    let temp = "Temp Var"
+    private lazy var network = MovieAPINetwork()
+    var movieID = ""
+    
+    var sendMovieDetailToView: ((MovieModel)->())?
+    
+    
+    func fetchMovieDetail() {
+        network.getMovieDetail(with: movieID) { [weak self] movieDetailModel in
+            self?.sendMovieDetailToView?(movieDetailModel)
+            FirebaseEventLogger.logMovieInformation(movieModel: movieDetailModel)
+        }
+    }
+    
 }

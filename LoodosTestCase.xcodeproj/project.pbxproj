@@ -22,8 +22,8 @@
 		2CB1E00D27EF0184007A7A76 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00C27EF0184007A7A76 /* TableViewDataSource.swift */; };
 		2CB1E01127EF0229007A7A76 /* CustomGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01027EF0229007A7A76 /* CustomGestureHandler.swift */; };
 		2CB1E01327EF0231007A7A76 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01227EF0231007A7A76 /* BaseTableViewCell.swift */; };
-		2CB1E01627EF046B007A7A76 /* BaseFilmInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */; };
-		2CB1E01727EF046B007A7A76 /* BaseFilmInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */; };
+		2CB1E01627EF046B007A7A76 /* BaseMovieInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01427EF046B007A7A76 /* BaseMovieInformationCell.swift */; };
+		2CB1E01727EF046B007A7A76 /* BaseMovieInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1E01527EF046B007A7A76 /* BaseMovieInformationCell.xib */; };
 		2CB1E01927EF273A007A7A76 /* FirebaseEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01827EF273A007A7A76 /* FirebaseEventLogger.swift */; };
 		2CB1E01E27EF42FA007A7A76 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01C27EF42FA007A7A76 /* MovieDetailViewController.swift */; };
 		2CB1E01F27EF42FA007A7A76 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1E01D27EF42FA007A7A76 /* MovieDetailViewController.xib */; };
@@ -52,8 +52,8 @@
 		2CB1E00C27EF0184007A7A76 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		2CB1E01027EF0229007A7A76 /* CustomGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGestureHandler.swift; sourceTree = "<group>"; };
 		2CB1E01227EF0231007A7A76 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFilmInformationCell.swift; sourceTree = "<group>"; };
-		2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseFilmInformationCell.xib; sourceTree = "<group>"; };
+		2CB1E01427EF046B007A7A76 /* BaseMovieInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMovieInformationCell.swift; sourceTree = "<group>"; };
+		2CB1E01527EF046B007A7A76 /* BaseMovieInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseMovieInformationCell.xib; sourceTree = "<group>"; };
 		2CB1E01827EF273A007A7A76 /* FirebaseEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEventLogger.swift; sourceTree = "<group>"; };
 		2CB1E01C27EF42FA007A7A76 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		2CB1E01D27EF42FA007A7A76 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 		2CB1E00B27EF0173007A7A76 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */,
-				2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */,
+				2CB1E01427EF046B007A7A76 /* BaseMovieInformationCell.swift */,
+				2CB1E01527EF046B007A7A76 /* BaseMovieInformationCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 				2CF25D8B27ED15E600277678 /* MainViewController.xib in Resources */,
 				2C4B726A27EC73E70055B1F8 /* SplashViewController.xib in Resources */,
 				2C4B725627EC718D0055B1F8 /* Assets.xcassets in Resources */,
-				2CB1E01727EF046B007A7A76 /* BaseFilmInformationCell.xib in Resources */,
+				2CB1E01727EF046B007A7A76 /* BaseMovieInformationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +378,7 @@
 				2CB1E01327EF0231007A7A76 /* BaseTableViewCell.swift in Sources */,
 				2CB1E01127EF0229007A7A76 /* CustomGestureHandler.swift in Sources */,
 				2CB1E01E27EF42FA007A7A76 /* MovieDetailViewController.swift in Sources */,
-				2CB1E01627EF046B007A7A76 /* BaseFilmInformationCell.swift in Sources */,
+				2CB1E01627EF046B007A7A76 /* BaseMovieInformationCell.swift in Sources */,
 				2CB1E02127EF4309007A7A76 /* MovieDetailViewModel.swift in Sources */,
 				2CB1E01927EF273A007A7A76 /* FirebaseEventLogger.swift in Sources */,
 				2CB1E00727EEFBFD007A7A76 /* SearchResultModel.swift in Sources */,

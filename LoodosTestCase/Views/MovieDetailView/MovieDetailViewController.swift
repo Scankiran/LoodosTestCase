@@ -10,24 +10,63 @@ import UIKit
 class MovieDetailViewController: UIViewController {
 
     // MARK: Outlets -
+    @IBOutlet private weak var imageViewMoviePoster: UIImageView!
+    @IBOutlet private weak var labelMovieTitle: UILabel!
+    @IBOutlet private weak var labelMoviePlot: UILabel!
+    @IBOutlet private weak var labelYear: UILabel!
+    @IBOutlet private weak var labelRuntime: UILabel!
+    @IBOutlet private weak var labelGenres: UILabel!
+    @IBOutlet private weak var labelDirector: UILabel!
+    @IBOutlet private weak var labelActors: UILabel!
+    @IBOutlet private weak var labelMetascore: UILabel!
+    @IBOutlet private weak var labelLanguages: UILabel!
+    @IBOutlet private weak var labelIMDBRating: UILabel!
+    @IBOutlet private weak var labelAwards: UILabel!
     
     // MARK: View Model
-    
+    private lazy var viewModel: MovieDetailViewModel = {
+        return MovieDetailViewModel()
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindViewModel()
     }
 
+    private func bindViewModel() {
 
-    /*
-    // MARK: - Navigation
+        viewModel.sendMovieDetailToView = { [weak self] (movieDetail) in
+            self?.fillTheView(movieDetail: movieDetail)
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        viewModel.fetchMovieDetail()
     }
-    */
 
+    func setMovieIDToViewModel(movieID: String) {
+        self.viewModel.movieID = movieID
+    }
+}
+
+
+private extension MovieDetailViewController {
+    
+    func fillTheView(movieDetail: MovieModel) {
+        if let posterURL = URL(string: movieDetail.poster) {
+            imageViewMoviePoster.kf.setImage(with: posterURL)
+        }
+        
+        labelMovieTitle.text = movieDetail.title
+        labelMoviePlot.text = movieDetail.plot
+        
+        labelYear.text = "Year: \(movieDetail.year)"
+        labelRuntime.text = "Runtime: \(movieDetail.runtime)"
+        labelGenres.text = "Genre: \(movieDetail.genre)"
+        labelDirector.text = "Director: \(movieDetail.director)"
+        labelActors.text = "Actors: \(movieDetail.actors)"
+        labelMetascore.text = "Metascore: \(movieDetail.metascore)"
+        labelLanguages.text = "Languages: \(movieDetail.language)"
+        labelIMDBRating.text = "IMDB Rating: \(movieDetail.imdbRating)"
+        labelAwards.text = "Awards: \(movieDetail.awards)"
+        
+    }
 }
