@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
@@ -44,7 +45,7 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
 // MARK: BaseFilmInformationCellOutputDelegate
 extension TableViewDataSource: BaseFilmInformationCellOutputDelegate {
     func cellTapped(filmID: String) {
-        print(filmID)
+        
     }
     
     
