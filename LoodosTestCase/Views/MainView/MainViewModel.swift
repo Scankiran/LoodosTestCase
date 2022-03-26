@@ -20,20 +20,22 @@ class MainViewModel {
     var sendDataToView: (([BaseMovieModel]) -> ())?
 
 
-    func searchMovie(with text: String) {
+    //Creates a search request 0.8 seconds after typing in the searchBar is finished.
+    func searchMovie(with movieName: String) {
 
-        if text != "", !text.isEmpty {
+        if movieName != "", !movieName.isEmpty {
             isSearchMode = true
 
+            // To delay creating search movie request. This prevent unnecessary network calls.
             if searchTimer != nil {
                 searchTimer?.invalidate()
                 searchTimer = nil
             }
-
-            searchTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(searchForKeyword(_:)), userInfo: text, repeats: false)
+            searchTimer = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(searchForKeyword(_:)), userInfo: movieName, repeats: false)
         }
     }
 
+    // Get notification permission from user.
     func getPermissionForNotification(delegate: UNUserNotificationCenterDelegate) {
         UNUserNotificationCenter.current().delegate = delegate
 
@@ -48,6 +50,7 @@ class MainViewModel {
 //MARK: Internal Functions
 private extension MainViewModel {
 
+    //
     @objc func searchForKeyword(_ timer: Timer) {
         let searchText = timer.userInfo as! String
 

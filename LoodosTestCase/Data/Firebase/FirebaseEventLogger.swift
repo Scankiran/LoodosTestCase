@@ -10,7 +10,7 @@ import FirebaseAnalytics
 
 class FirebaseEventLogger {
     
-    class func logMovieInformation(movieModel: MovieModel) {
+    static func logMovieInformation(movieModel: DetailedMovieModel) {
         Analytics.logEvent("movie_detail_screen_viewed", parameters: [
             "Id": movieModel.imdbID,
             "Title" : movieModel.title,
@@ -26,7 +26,7 @@ class FirebaseEventLogger {
         ])
     }
     
-    class func logErrorMessage(message: String) {
+    static func logErrorMessage(message: String) {
         Analytics.logEvent("network_error", parameters: [
             "error_message" : message
         ])

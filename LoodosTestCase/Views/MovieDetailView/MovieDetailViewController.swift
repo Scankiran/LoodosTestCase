@@ -50,23 +50,24 @@ class MovieDetailViewController: UIViewController {
 
 private extension MovieDetailViewController {
     
-    func fillTheView(movieDetail: MovieModel) {
-        if let posterURL = URL(string: movieDetail.poster) {
+    func fillTheView(movieDetail: DetailedMovieModel) {
+        if let poster = movieDetail.poster,
+           let posterURL = URL(string: poster) {
             imageViewMoviePoster.kf.setImage(with: posterURL)
         }
         
         labelMovieTitle.text = movieDetail.title
         labelMoviePlot.text = movieDetail.plot
         
-        labelYear.text = "Year: \(movieDetail.year)"
-        labelRuntime.text = "Runtime: \(movieDetail.runtime)"
-        labelGenres.text = "Genre: \(movieDetail.genre)"
-        labelDirector.text = "Director: \(movieDetail.director)"
-        labelActors.text = "Actors: \(movieDetail.actors)"
-        labelMetascore.text = "Metascore: \(movieDetail.metascore)"
-        labelLanguages.text = "Languages: \(movieDetail.language)"
-        labelIMDBRating.text = "IMDB Rating: \(movieDetail.imdbRating)"
-        labelAwards.text = "Awards: \(movieDetail.awards)"
+        labelYear.text = "Year: \(movieDetail.year.asStringOrEmpty())"
+        labelRuntime.text = "Runtime: \(movieDetail.runtime.asStringOrEmpty())"
+        labelGenres.text = "Genre: \(movieDetail.genre.asStringOrEmpty())"
+        labelDirector.text = "Director: \(movieDetail.director.asStringOrEmpty())"
+        labelActors.text = "Actors: \(movieDetail.actors.asStringOrEmpty())"
+        labelMetascore.text = "Metascore: \(movieDetail.metascore.asStringOrEmpty())"
+        labelLanguages.text = "Languages: \(movieDetail.language.asStringOrEmpty())"
+        labelIMDBRating.text = "IMDB Rating: \(movieDetail.imdbRating.asStringOrEmpty())"
+        labelAwards.text = "Awards: \(movieDetail.awards.asStringOrEmpty())"
         
     }
 }

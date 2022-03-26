@@ -50,9 +50,8 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
 
 // MARK: BaseMovieInformationCellOutputDelegate
 extension TableViewDataSource: BaseMovieInformationCellOutputDelegate {
+    
     func cellTapped(movieID: String) {
         self.outputDelegate?.openMovieDetailPage(with: movieID)
     }
-    
-    
 }

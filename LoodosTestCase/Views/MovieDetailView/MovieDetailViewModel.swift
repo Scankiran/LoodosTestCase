@@ -12,7 +12,7 @@ class MovieDetailViewModel {
     private lazy var network = MovieAPINetwork()
     var movieID = ""
     
-    var sendMovieDetailToView: ((MovieModel)->())?
+    var sendMovieDetailToView: ((DetailedMovieModel)->())?
     
     
     func fetchMovieDetail() {

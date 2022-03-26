@@ -26,6 +26,10 @@ class RemoteConfigManager {
         return value
     }
     
+    deinit {
+        print("remote config manager de init")
+    }
+    
     
     
 }

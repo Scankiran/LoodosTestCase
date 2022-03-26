@@ -22,7 +22,6 @@ class MovieAPINetwork {
             "apiKey": apiKey,
             "s": name
         ]
-        print(parameters)
         
         AF.request(baseUrl,
             method: .get,
@@ -39,7 +38,7 @@ class MovieAPINetwork {
         })
     }
 
-    func getMovieDetail(with imdbId: String, completion: @escaping ((MovieModel) -> Void)) {
+    func getMovieDetail(with imdbId: String, completion: @escaping ((DetailedMovieModel) -> Void)) {
         ProgressHUD.show()
 
         let parameters: [String: String] = [
@@ -49,12 +48,15 @@ class MovieAPINetwork {
         
         AF.request(baseUrl,
             method: .get,
-            parameters: parameters).responseDecodable(of: MovieModel.self, completionHandler: { result in
+            parameters: parameters).responseDecodable(of: DetailedMovieModel.self, completionHandler: { result in
 
             if let responseValue = result.value {
+                if let error = responseValue.error {
+                    ErrorHandlerManager.showErrorMessage(message: error)
+                    return
+                }
                 ProgressHUD.dismiss()
                 completion(responseValue)
-
             }
         })
     }

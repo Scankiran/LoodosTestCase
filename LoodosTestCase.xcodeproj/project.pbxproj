@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		222565D3BF156F0F0BF8E41D /* Pods_LoodosTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35548390DA66A429CD4F12B0 /* Pods_LoodosTestCase.framework */; };
+		2C029CE827EFAFDF00084C20 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C029CE727EFAFDF00084C20 /* Optional+Extension.swift */; };
 		2C4B724D27EC71890055B1F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B724C27EC71890055B1F8 /* AppDelegate.swift */; };
 		2C4B725627EC718D0055B1F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B725527EC718D0055B1F8 /* Assets.xcassets */; };
 		2C4B725927EC718D0055B1F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B725727EC718D0055B1F8 /* LaunchScreen.storyboard */; };
@@ -16,7 +17,7 @@
 		2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */; };
 		2C4B726E27EC77390055B1F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */; };
 		2CB1E00227EEF43E007A7A76 /* FilmAPINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00127EEF43E007A7A76 /* FilmAPINetwork.swift */; };
-		2CB1E00527EEF450007A7A76 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00427EEF450007A7A76 /* FilmModel.swift */; };
+		2CB1E00527EEF450007A7A76 /* DetailedMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00427EEF450007A7A76 /* DetailedMovieModel.swift */; };
 		2CB1E00727EEFBFD007A7A76 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00627EEFBFD007A7A76 /* SearchResultModel.swift */; };
 		2CB1E00927EEFD77007A7A76 /* ErrorHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00827EEFD77007A7A76 /* ErrorHandlerManager.swift */; };
 		2CB1E00D27EF0184007A7A76 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00C27EF0184007A7A76 /* TableViewDataSource.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2C029CE327EF95BE00084C20 /* LoodosTestCase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoodosTestCase.entitlements; sourceTree = "<group>"; };
+		2C029CE727EFAFDF00084C20 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		2C4B724927EC71890055B1F8 /* LoodosTestCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosTestCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4B724C27EC71890055B1F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4B725527EC718D0055B1F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,7 +49,7 @@
 		2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CB1E00127EEF43E007A7A76 /* FilmAPINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAPINetwork.swift; sourceTree = "<group>"; };
-		2CB1E00427EEF450007A7A76 /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
+		2CB1E00427EEF450007A7A76 /* DetailedMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMovieModel.swift; sourceTree = "<group>"; };
 		2CB1E00627EEFBFD007A7A76 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		2CB1E00827EEFD77007A7A76 /* ErrorHandlerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerManager.swift; sourceTree = "<group>"; };
 		2CB1E00C27EF0184007A7A76 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2C029CE627EFAFC900084C20 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C029CE727EFAFDF00084C20 /* Optional+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2C4B724027EC71890055B1F8 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 				2C4B726227EC72F60055B1F8 /* Data */,
 				2C4B726327EC73270055B1F8 /* Views */,
 				2CB1E00F27EF020D007A7A76 /* Components */,
+				2C029CE627EFAFC900084C20 /* Extensions */,
 			);
 			path = LoodosTestCase;
 			sourceTree = "<group>";
@@ -203,7 +214,7 @@
 		2CB1E00327EEF443007A7A76 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2CB1E00427EEF450007A7A76 /* FilmModel.swift */,
+				2CB1E00427EEF450007A7A76 /* DetailedMovieModel.swift */,
 				2CB1E00627EEFBFD007A7A76 /* SearchResultModel.swift */,
 			);
 			path = Models;
@@ -375,6 +386,7 @@
 			files = (
 				2CF25D8D27ED15FF00277678 /* MainViewModel.swift in Sources */,
 				2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */,
+				2C029CE827EFAFDF00084C20 /* Optional+Extension.swift in Sources */,
 				2CF25D8227ED07A100277678 /* RemoteConfigManager.swift in Sources */,
 				2CB1E00227EEF43E007A7A76 /* FilmAPINetwork.swift in Sources */,
 				2CB1E01327EF0231007A7A76 /* BaseTableViewCell.swift in Sources */,
@@ -386,7 +398,7 @@
 				2CB1E00727EEFBFD007A7A76 /* SearchResultModel.swift in Sources */,
 				2CB1E00927EEFD77007A7A76 /* ErrorHandlerManager.swift in Sources */,
 				2CB1E00D27EF0184007A7A76 /* TableViewDataSource.swift in Sources */,
-				2CB1E00527EEF450007A7A76 /* FilmModel.swift in Sources */,
+				2CB1E00527EEF450007A7A76 /* DetailedMovieModel.swift in Sources */,
 				2C4B724D27EC71890055B1F8 /* AppDelegate.swift in Sources */,
 				2CF25D8A27ED15E600277678 /* MainViewController.swift in Sources */,
 				2CF25D8727ED134A00277678 /* Reachability.swift in Sources */,

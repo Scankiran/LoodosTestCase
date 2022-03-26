@@ -53,6 +53,7 @@ private extension SplashViewController {
         self.labelViewTitle.text = text
     }
 
+    // Shows connection error alert. Okey button check connection again and again.
     func showErrorAlert(alertMessage: String) {
         let alert = UIAlertController(title: "Error!", message: alertMessage, preferredStyle: .alert)
         
@@ -62,6 +63,12 @@ private extension SplashViewController {
         self.present(alert, animated: true)
     }
     
+}
+
+// MARK: Navigation 
+private extension SplashViewController {
+    
+    // Navigate to Main View
     func openMainViewController() {
         let viewController = MainViewController()
         viewController.modalPresentationStyle = .fullScreen

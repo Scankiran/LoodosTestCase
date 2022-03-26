@@ -13,6 +13,7 @@ class SplashViewModel {
     var sendDataToView: ((String) -> ())?
     var openMainViewController: (() -> ())?
 
+    
     func fetchKeyFromConfig() {
         let remoteConfig = RemoteConfigManager()
 
@@ -24,6 +25,10 @@ class SplashViewModel {
         }
     }
 
+    /**
+     This function check device internet connection. If there is, return true
+    - Returns if connected,  true
+     */
     func checkInternetConnection() -> Bool {
         if Reachability.isConnectedToNetwork() {
             return true
@@ -39,6 +44,7 @@ class SplashViewModel {
 //MARK: Internal Functions
 private extension SplashViewModel {
     
+    // 3 second timer to open main page.
     private func runTimerToPushMainView() {
         _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(openMainView), userInfo: nil, repeats: false)
     }

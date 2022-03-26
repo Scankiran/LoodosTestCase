@@ -1,5 +1,5 @@
 //
-//  MovieModel.swift
+//  DetailedMovieModel.swift
 //  LoodosTestCase
 //
 //  Created by Said Çankıran on 26.03.2022.
@@ -7,32 +7,33 @@
 
 import Foundation
 
-struct MovieModel: Codable {
-    let title: String
-    let year: String
-    let rated: String
-    let released: String
-    let runtime: String
-    let genre: String
-    let director: String
-    let writer: String
-    let actors: String
-    let plot: String
-    let language: String
-    let country: String
-    let awards: String
-    let poster: String
-    let ratings: [Rating]
-    let metascore: String
-    let imdbRating: String
-    let imdbVotes: String
-    let imdbID: String
-    let type: String
-    let dvd: String
-    let boxOffice: String
-    let production: String
-    let website: String
-    let response: String
+struct DetailedMovieModel: Codable {
+    let title: String?
+    let year: String?
+    let rated: String?
+    let released: String?
+    let runtime: String?
+    let genre: String?
+    let director: String?
+    let writer: String?
+    let actors: String?
+    let plot: String?
+    let language: String?
+    let country: String?
+    let awards: String?
+    let poster: String?
+    let ratings: [Rating]?
+    let metascore: String?
+    let imdbRating: String?
+    let imdbVotes: String?
+    let imdbID: String?
+    let type: String?
+    let dvd: String?
+    let boxOffice: String?
+    let production: String?
+    let website: String?
+    let response: String?
+    let error: String?
 
     enum CodingKeys: String, CodingKey {
         case title = "Title"
@@ -58,6 +59,7 @@ struct MovieModel: Codable {
         case production = "Production"
         case website = "Website"
         case response = "Response"
+        case error = "Error"
     }
 }
 
