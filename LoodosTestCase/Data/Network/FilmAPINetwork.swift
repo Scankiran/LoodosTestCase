@@ -17,33 +17,31 @@ class FilmAPINetwork {
 
     func searchFilm(with name: String, completion: @escaping ((SearchResultModel) -> Void)) {
         ProgressHUD.show()
-        
+
         let parameters: [String: String] = [
             "apiKey": apiKey,
             "s": name
         ]
         print(parameters)
+        
         AF.request(baseUrl,
             method: .get,
             parameters: parameters).responseDecodable(of: SearchResultModel.self, completionHandler: { result in
-            
+
             if let responseValue = result.value {
-                ProgressHUD.dismiss()
                 if let error = responseValue.error {
                     ErrorHandlerManager.showErrorMessage(message: error)
+                    return
                 }
+                ProgressHUD.dismiss()
                 completion(responseValue)
-            }
-            
-            if let err = result.error {
-                ErrorHandlerManager.showErrorMessage(err: err)
             }
         })
     }
 
     func getFilmDetail(with imdbId: String, completion: @escaping ((FilmModel) -> Void)) {
         ProgressHUD.show()
-        
+
         let parameters: [String: String] = [
             "apiKey": apiKey,
             "i": imdbId
@@ -52,19 +50,21 @@ class FilmAPINetwork {
         AF.request(baseUrl,
             method: .get,
             parameters: parameters).responseDecodable(of: FilmModel.self, completionHandler: { result in
-            
+
             if let responseValue = result.value {
                 ProgressHUD.dismiss()
                 completion(responseValue)
-                
-            }
-            
-            if let err = result.error {
-                ErrorHandlerManager.showErrorMessage(err: err)
+
             }
         })
     }
-    
-    
+
+
+    func killOtherRequest() {
+        AF.session.getTasksWithCompletionHandler({ dataTasks, uploadTasks, downloadTasks in
+            dataTasks.forEach { $0.cancel() }
+        })
+    }
+
 }
 

@@ -31,6 +31,7 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.generateReusableCell(BaseFilmInformationCell.self, indexPath: indexPath)
         
         cell.configureCell(baseFilmModel: baseFilmModelData[indexPath.row])
+        cell.outputDelegate = self
         return cell
     }
 
@@ -38,4 +39,13 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
         return 90
     }
 
+}
+
+// MARK: BaseFilmInformationCellOutputDelegate
+extension TableViewDataSource: BaseFilmInformationCellOutputDelegate {
+    func cellTapped(filmID: String) {
+        print(filmID)
+    }
+    
+    
 }

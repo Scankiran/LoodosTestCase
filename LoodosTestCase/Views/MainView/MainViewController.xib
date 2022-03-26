@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="LoodosTestCase" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="nYV-H3-Z4q" id="Y0T-mD-o2J"/>
                 <outlet property="tableView" destination="GQR-Bl-n1G" id="ltf-zn-bkZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,19 +22,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GQR-Bl-n1G">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nYV-H3-Z4q">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="GQR-Bl-n1G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Sk-yF-lB7"/>
+                <constraint firstItem="nYV-H3-Z4q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NZk-23-Oww"/>
+                <constraint firstItem="nYV-H3-Z4q" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="PyE-Ol-Cb9"/>
+                <constraint firstItem="nYV-H3-Z4q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dEJ-zo-PgA"/>
                 <constraint firstItem="GQR-Bl-n1G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f7H-dr-AG8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GQR-Bl-n1G" secondAttribute="trailing" id="gQo-VI-920"/>
+                <constraint firstItem="GQR-Bl-n1G" firstAttribute="top" secondItem="nYV-H3-Z4q" secondAttribute="bottom" id="jQB-cs-dNh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GQR-Bl-n1G" secondAttribute="bottom" id="nZi-9T-ZJZ"/>
             </constraints>
-            <point key="canvasLocation" x="133" y="76"/>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
         </view>
     </objects>
     <resources>
