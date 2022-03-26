@@ -15,6 +15,10 @@
 		2C4B726A27EC73E70055B1F8 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B726827EC73E70055B1F8 /* SplashViewController.xib */; };
 		2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */; };
 		2C4B726E27EC77390055B1F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */; };
+		2CB1E00227EEF43E007A7A76 /* FilmAPINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00127EEF43E007A7A76 /* FilmAPINetwork.swift */; };
+		2CB1E00527EEF450007A7A76 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00427EEF450007A7A76 /* FilmModel.swift */; };
+		2CB1E00727EEFBFD007A7A76 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00627EEFBFD007A7A76 /* SearchResultModel.swift */; };
+		2CB1E00927EEFD77007A7A76 /* ErrorHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00827EEFD77007A7A76 /* ErrorHandlerManager.swift */; };
 		2CF25D8227ED07A100277678 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */; };
 		2CF25D8727ED134A00277678 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8627ED134A00277678 /* Reachability.swift */; };
 		2CF25D8A27ED15E600277678 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8827ED15E600277678 /* MainViewController.swift */; };
@@ -32,6 +36,10 @@
 		2C4B726827EC73E70055B1F8 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		2C4B726B27EC75550055B1F8 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CB1E00127EEF43E007A7A76 /* FilmAPINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAPINetwork.swift; sourceTree = "<group>"; };
+		2CB1E00427EEF450007A7A76 /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
+		2CB1E00627EEFBFD007A7A76 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
+		2CB1E00827EEFD77007A7A76 /* ErrorHandlerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerManager.swift; sourceTree = "<group>"; };
 		2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
 		2CF25D8627ED134A00277678 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2CF25D8827ED15E600277678 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +132,8 @@
 			children = (
 				2CF25D8027ED079400277678 /* Firebase */,
 				2CF25D8327ED0F2300277678 /* Network */,
+				2CB1E00327EEF443007A7A76 /* Models */,
+				2CB1E00827EEFD77007A7A76 /* ErrorHandlerManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -165,6 +175,15 @@
 			path = MovieDetailView;
 			sourceTree = "<group>";
 		};
+		2CB1E00327EEF443007A7A76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CB1E00427EEF450007A7A76 /* FilmModel.swift */,
+				2CB1E00627EEFBFD007A7A76 /* SearchResultModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2CF25D8027ED079400277678 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2CF25D8627ED134A00277678 /* Reachability.swift */,
+				2CB1E00127EEF43E007A7A76 /* FilmAPINetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -301,6 +321,10 @@
 				2CF25D8D27ED15FF00277678 /* MainViewModel.swift in Sources */,
 				2C4B726C27EC75550055B1F8 /* SplashViewModel.swift in Sources */,
 				2CF25D8227ED07A100277678 /* RemoteConfigManager.swift in Sources */,
+				2CB1E00227EEF43E007A7A76 /* FilmAPINetwork.swift in Sources */,
+				2CB1E00727EEFBFD007A7A76 /* SearchResultModel.swift in Sources */,
+				2CB1E00927EEFD77007A7A76 /* ErrorHandlerManager.swift in Sources */,
+				2CB1E00527EEF450007A7A76 /* FilmModel.swift in Sources */,
 				2C4B724D27EC71890055B1F8 /* AppDelegate.swift in Sources */,
 				2CF25D8A27ED15E600277678 /* MainViewController.swift in Sources */,
 				2CF25D8727ED134A00277678 /* Reachability.swift in Sources */,

@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
 
 
     private func bindViewModel() {
-        print(viewModel.temp)
+        viewModel.searchFilm(with: "inception")
     }
 
 }

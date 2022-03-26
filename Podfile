@@ -10,7 +10,10 @@ target 'LoodosTestCase' do
   pod 'Firebase/RemoteConfig'
   
   # Structure Pods
+  pod 'Alamofire', '~> 5.5'
+  pod 'Kingfisher', '~> 7.0'
   
   # Visual Pods
+  pod 'ProgressHUD'
 
 end
