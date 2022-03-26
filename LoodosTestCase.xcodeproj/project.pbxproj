@@ -36,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C029CE327EF95BE00084C20 /* LoodosTestCase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoodosTestCase.entitlements; sourceTree = "<group>"; };
 		2C4B724927EC71890055B1F8 /* LoodosTestCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosTestCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4B724C27EC71890055B1F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4B725527EC718D0055B1F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2C4B724C27EC71890055B1F8 /* AppDelegate.swift */,
+				2C029CE327EF95BE00084C20 /* LoodosTestCase.entitlements */,
 				2C4B725A27EC718D0055B1F8 /* Info.plist */,
 				2C4B726D27EC77390055B1F8 /* GoogleService-Info.plist */,
 			);
@@ -528,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = LoodosTestCase/App/LoodosTestCase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
@@ -562,6 +565,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = LoodosTestCase/App/LoodosTestCase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
