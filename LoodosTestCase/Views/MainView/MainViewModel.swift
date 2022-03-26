@@ -10,17 +10,17 @@ import Foundation
 class MainViewModel {
 
     // MARK: Private Properties
-    private let network = FilmAPINetwork()
+    private let network = MovieAPINetwork()
     private var searchTimer: Timer?
     
     // MARK: Public Properties
     var isSearchMode: Bool = false
 
     //MARK: Closures
-    var sendDataToView: (([BaseFilmModel]) -> ())?
+    var sendDataToView: (([BaseMovieModel]) -> ())?
 
 
-    func searchFilm(with text: String) {
+    func searchMovie(with text: String) {
         
         if text != "", !text.isEmpty {
             isSearchMode = true
@@ -38,9 +38,9 @@ class MainViewModel {
     @objc private func searchForKeyword(_ timer: Timer) {
         let searchText = timer.userInfo as! String
 
-        network.searchFilm(with: searchText) { [weak self] filmData in
-            if let filmData = filmData.search {
-                self?.sendDataToView?(filmData)
+        network.searchMovie(with: searchText) { [weak self] movieData in
+            if let movieData = movieData.search {
+                self?.sendDataToView?(movieData)
             }
         }
     }

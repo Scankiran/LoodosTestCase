@@ -10,13 +10,15 @@ import FirebaseAnalytics
 
 class FirebaseEventLogger {
     
-    class func logFilmInformation(filmModel: FilmModel) {
-        Analytics.logEvent("FilmDetailViewOpen", parameters: [
-            "id": filmModel.imdbID,
-            "title" : filmModel.title,
-            "year" : filmModel.year,
-            "imdbRating" : filmModel.imdbRating,
-            "plot" : filmModel.plot
+    class func logMovieInformation(movieModel: MovieModel) {
+        Analytics.logEvent("movie_detail_screen_viewed", parameters: [
+            "id": movieModel.imdbID,
+            "title" : movieModel.title,
+            "year" : movieModel.year,
+            "imdbRating" : movieModel.imdbRating,
+            "plot" : movieModel.plot
         ])
+        
+        
     }
 }

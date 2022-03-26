@@ -1,5 +1,5 @@
 //
-//  FilmAPINetwork.swift
+//  MovieAPINetwork.swift
 //  LoodosTestCase
 //
 //  Created by Said Çankıran on 26.03.2022.
@@ -9,13 +9,13 @@ import Foundation
 import Alamofire
 import ProgressHUD
 
-class FilmAPINetwork {
+class MovieAPINetwork {
 
     private let baseUrl = "http://www.omdbapi.com/"
     private let apiKey = "6d07ab49"
 
 
-    func searchFilm(with name: String, completion: @escaping ((SearchResultModel) -> Void)) {
+    func searchMovie(with name: String, completion: @escaping ((SearchResultModel) -> Void)) {
         ProgressHUD.show()
 
         let parameters: [String: String] = [
@@ -39,7 +39,7 @@ class FilmAPINetwork {
         })
     }
 
-    func getFilmDetail(with imdbId: String, completion: @escaping ((FilmModel) -> Void)) {
+    func getMovieDetail(with imdbId: String, completion: @escaping ((MovieModel) -> Void)) {
         ProgressHUD.show()
 
         let parameters: [String: String] = [
@@ -49,7 +49,7 @@ class FilmAPINetwork {
         
         AF.request(baseUrl,
             method: .get,
-            parameters: parameters).responseDecodable(of: FilmModel.self, completionHandler: { result in
+            parameters: parameters).responseDecodable(of: MovieModel.self, completionHandler: { result in
 
             if let responseValue = result.value {
                 ProgressHUD.dismiss()

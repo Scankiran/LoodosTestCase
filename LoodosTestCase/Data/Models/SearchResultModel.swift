@@ -8,7 +8,7 @@
 import Foundation
 
 struct SearchResultModel: Codable {
-    let search: [BaseFilmModel]?
+    let search: [BaseMovieModel]?
     let totalResults: String?
     let response: String
     let error: String?
@@ -21,8 +21,8 @@ struct SearchResultModel: Codable {
     }
 }
 
-// MARK: - BaseFilmModel
-struct BaseFilmModel: Codable {
+// MARK: - BaseMovieModel
+struct BaseMovieModel: Codable {
     let title: String
     let year: String
     let imdbID: String

@@ -1,5 +1,5 @@
 //
-//  FilmModel.swift
+//  MovieModel.swift
 //  LoodosTestCase
 //
 //  Created by Said Çankıran on 26.03.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FilmModel: Codable {
+struct MovieModel: Codable {
     let title: String
     let year: String
     let rated: String

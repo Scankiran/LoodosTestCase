@@ -10,13 +10,13 @@ import FirebaseAnalytics
 
 class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    private var baseFilmModelData: [BaseFilmModel] = []
+    private var baseMovieModelData: [BaseMovieModel] = []
 
     override init() {
     }
 
-    func updateDataSource(baseFilmModelData: [BaseFilmModel]) {
-        self.baseFilmModelData = baseFilmModelData
+    func updateDataSource(baseMovieModelData: [BaseMovieModel]) {
+        self.baseMovieModelData = baseMovieModelData
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,14 +24,14 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return baseFilmModelData.count
+        return baseMovieModelData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.generateReusableCell(BaseFilmInformationCell.self, indexPath: indexPath)
+        let cell = tableView.generateReusableCell(BaseMovieInformationCell.self, indexPath: indexPath)
         
-        cell.configureCell(baseFilmModel: baseFilmModelData[indexPath.row])
+        cell.configureCell(baseMovieModel: baseMovieModelData[indexPath.row])
         cell.outputDelegate = self
         return cell
     }
@@ -42,10 +42,10 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
 
 }
 
-// MARK: BaseFilmInformationCellOutputDelegate
-extension TableViewDataSource: BaseFilmInformationCellOutputDelegate {
-    func cellTapped(filmID: String) {
-        
+// MARK: BaseMovieInformationCellOutputDelegate
+extension TableViewDataSource: BaseMovieInformationCellOutputDelegate {
+    func cellTapped(movieID: String) {
+
     }
     
     

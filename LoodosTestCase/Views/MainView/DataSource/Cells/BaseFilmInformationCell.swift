@@ -1,5 +1,5 @@
 //
-//  BaseFilmInformationCell.swift
+//  BaseMovieInformationCell.swift
 //  LoodosTestCase
 //
 //  Created by Said Çankıran on 26.03.2022.
@@ -8,39 +8,39 @@
 import UIKit
 import Kingfisher
 
-protocol BaseFilmInformationCellOutputDelegate: AnyObject {
-    func cellTapped(filmID: String)
+protocol BaseMovieInformationCellOutputDelegate: AnyObject {
+    func cellTapped(movieID: String)
 }
 
-class BaseFilmInformationCell: BaseTableViewCell {
+class BaseMovieInformationCell: BaseTableViewCell {
 
-    @IBOutlet private weak var imageViewFilmPoster: UIImageView!
-    @IBOutlet private weak var labelFilmTitle: UILabel!
-    @IBOutlet private weak var labelFilmYear: UILabel!
+    @IBOutlet private weak var imageViewMoviePoster: UIImageView!
+    @IBOutlet private weak var labelMovieTitle: UILabel!
+    @IBOutlet private weak var labelMovieYear: UILabel!
 
-    weak var outputDelegate: BaseFilmInformationCellOutputDelegate?
+    weak var outputDelegate: BaseMovieInformationCellOutputDelegate?
 
-    func configureCell(baseFilmModel: BaseFilmModel) {
+    func configureCell(baseMovieModel: BaseMovieModel) {
 
-        if let url = URL(string: baseFilmModel.poster) {
-            imageViewFilmPoster.kf.setImage(with: url, placeholder: UIImage(named: "no_image_placeholder"))
+        if let url = URL(string: baseMovieModel.poster) {
+            imageViewMoviePoster.kf.setImage(with: url, placeholder: UIImage(named: "no_image_placeholder"))
         }
 
-        labelFilmTitle.text = baseFilmModel.title
-        labelFilmYear.text = baseFilmModel.year
+        labelMovieTitle.text = baseMovieModel.title
+        labelMovieYear.text = baseMovieModel.year
 
-        handleTap(filmModel: baseFilmModel)
+        handleTap(movieModel: baseMovieModel)
     }
 
-    func handleTap(filmModel: BaseFilmModel) {
+    func handleTap(movieModel: BaseMovieModel) {
         self.contentView.onTap { _ in
-            self.outputDelegate?.cellTapped(filmID: filmModel.imdbID)
+            self.outputDelegate?.cellTapped(movieID: movieModel.imdbID)
         }
     }
 
 
 
     override func prepareForReuse() {
-        imageViewFilmPoster.image = nil
+        imageViewMoviePoster.image = nil
     }
 }

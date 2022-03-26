@@ -25,6 +25,9 @@
 		2CB1E01627EF046B007A7A76 /* BaseFilmInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */; };
 		2CB1E01727EF046B007A7A76 /* BaseFilmInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */; };
 		2CB1E01927EF273A007A7A76 /* FirebaseEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01827EF273A007A7A76 /* FirebaseEventLogger.swift */; };
+		2CB1E01E27EF42FA007A7A76 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01C27EF42FA007A7A76 /* MovieDetailViewController.swift */; };
+		2CB1E01F27EF42FA007A7A76 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1E01D27EF42FA007A7A76 /* MovieDetailViewController.xib */; };
+		2CB1E02127EF4309007A7A76 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E02027EF4309007A7A76 /* MovieDetailViewModel.swift */; };
 		2CF25D8227ED07A100277678 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */; };
 		2CF25D8727ED134A00277678 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8627ED134A00277678 /* Reachability.swift */; };
 		2CF25D8A27ED15E600277678 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8827ED15E600277678 /* MainViewController.swift */; };
@@ -52,6 +55,9 @@
 		2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFilmInformationCell.swift; sourceTree = "<group>"; };
 		2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseFilmInformationCell.xib; sourceTree = "<group>"; };
 		2CB1E01827EF273A007A7A76 /* FirebaseEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEventLogger.swift; sourceTree = "<group>"; };
+		2CB1E01C27EF42FA007A7A76 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		2CB1E01D27EF42FA007A7A76 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		2CB1E02027EF4309007A7A76 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
 		2CF25D8627ED134A00277678 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2CF25D8827ED15E600277678 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +191,9 @@
 		2C4B726627EC73880055B1F8 /* MovieDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				2CB1E02027EF4309007A7A76 /* MovieDetailViewModel.swift */,
+				2CB1E01C27EF42FA007A7A76 /* MovieDetailViewController.swift */,
+				2CB1E01D27EF42FA007A7A76 /* MovieDetailViewController.xib */,
 			);
 			path = MovieDetailView;
 			sourceTree = "<group>";
@@ -303,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB1E01F27EF42FA007A7A76 /* MovieDetailViewController.xib in Resources */,
 				2C4B725927EC718D0055B1F8 /* LaunchScreen.storyboard in Resources */,
 				2C4B726E27EC77390055B1F8 /* GoogleService-Info.plist in Resources */,
 				2CF25D8B27ED15E600277678 /* MainViewController.xib in Resources */,
@@ -367,7 +377,9 @@
 				2CB1E00227EEF43E007A7A76 /* FilmAPINetwork.swift in Sources */,
 				2CB1E01327EF0231007A7A76 /* BaseTableViewCell.swift in Sources */,
 				2CB1E01127EF0229007A7A76 /* CustomGestureHandler.swift in Sources */,
+				2CB1E01E27EF42FA007A7A76 /* MovieDetailViewController.swift in Sources */,
 				2CB1E01627EF046B007A7A76 /* BaseFilmInformationCell.swift in Sources */,
+				2CB1E02127EF4309007A7A76 /* MovieDetailViewModel.swift in Sources */,
 				2CB1E01927EF273A007A7A76 /* FirebaseEventLogger.swift in Sources */,
 				2CB1E00727EEFBFD007A7A76 /* SearchResultModel.swift in Sources */,
 				2CB1E00927EEFD77007A7A76 /* ErrorHandlerManager.swift in Sources */,
