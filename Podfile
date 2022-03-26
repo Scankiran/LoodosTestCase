@@ -8,6 +8,7 @@ target 'LoodosTestCase' do
   # Firebase Pods
 	pod 'Firebase/Analytics'
   pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Messaging'
   
   # Structure Pods
   pod 'Alamofire', '~> 5.5'

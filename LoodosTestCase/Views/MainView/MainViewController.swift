@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UNUserNotificationCenterDelegate {
 
     // MARK: Outlets -
     @IBOutlet private weak var tableView: UITableView!
@@ -36,6 +36,9 @@ class MainViewController: UIViewController {
             self?.dataSource?.updateDataSource(baseMovieModelData: baseMovieModelData)
             self?.tableView.reloadData()
         }
+        
+        viewModel.getPermissionForNotification(delegate: self)
+
     }
 }
 

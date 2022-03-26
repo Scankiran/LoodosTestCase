@@ -5,7 +5,7 @@
 //  Created by Said Çankıran on 25.03.2022.
 //
 
-import Foundation
+import UIKit
 
 class MainViewModel {
 
@@ -34,8 +34,23 @@ class MainViewModel {
         }
     }
 
+    func getPermissionForNotification(delegate: UNUserNotificationCenterDelegate) {
+            // 1
+            UNUserNotificationCenter.current().delegate = delegate
+            // 2
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+              options: authOptions) { _, _ in }
+            // 3
+            UIApplication.shared.registerForRemoteNotifications()
+    }
+    
+}
 
-    @objc private func searchForKeyword(_ timer: Timer) {
+//MARK: Internal Functions
+private extension MainViewModel {
+    
+    @objc func searchForKeyword(_ timer: Timer) {
         let searchText = timer.userInfo as! String
 
         network.searchMovie(with: searchText) { [weak self] movieData in
@@ -44,5 +59,5 @@ class MainViewModel {
             }
         }
     }
-
+    
 }

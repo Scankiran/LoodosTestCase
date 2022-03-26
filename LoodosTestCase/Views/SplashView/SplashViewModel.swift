@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import Reachability
 
 class SplashViewModel {
 
@@ -34,6 +33,12 @@ class SplashViewModel {
         }
     }
 
+}
+
+
+//MARK: Internal Functions
+private extension SplashViewModel {
+    
     private func runTimerToPushMainView() {
         _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(openMainView), userInfo: nil, repeats: false)
     }
