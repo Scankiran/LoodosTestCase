@@ -25,4 +25,10 @@ class FirebaseEventLogger {
             "Awards": movieModel.awards
         ])
     }
+    
+    class func logErrorMessage(message: String) {
+        Analytics.logEvent("network_error", parameters: [
+            "error_message" : message
+        ])
+    }
 }

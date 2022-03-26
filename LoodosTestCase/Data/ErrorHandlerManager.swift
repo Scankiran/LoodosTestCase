@@ -14,5 +14,6 @@ class ErrorHandlerManager {
     class func showErrorMessage(message: String) {
         print(message)
         ProgressHUD.showError(message, image: nil, interaction: false)
+        FirebaseEventLogger.logErrorMessage(message: message)
     }
 }
