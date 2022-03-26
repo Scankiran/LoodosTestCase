@@ -27,12 +27,15 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        return UITableViewCell()
+        
+        let cell = tableView.generateReusableCell(BaseFilmInformationCell.self, indexPath: indexPath)
+        
+        cell.configureCell(baseFilmModel: baseFilmModelData[indexPath.row])
+        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 230
+        return 90
     }
 
 }

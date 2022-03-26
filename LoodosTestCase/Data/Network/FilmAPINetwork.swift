@@ -22,13 +22,16 @@ class FilmAPINetwork {
             "apiKey": apiKey,
             "s": name
         ]
-
+        print(parameters)
         AF.request(baseUrl,
             method: .get,
             parameters: parameters).responseDecodable(of: SearchResultModel.self, completionHandler: { result in
             
             if let responseValue = result.value {
                 ProgressHUD.dismiss()
+                if let error = responseValue.error {
+                    ErrorHandlerManager.showErrorMessage(message: error)
+                }
                 completion(responseValue)
             }
             

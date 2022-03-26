@@ -34,6 +34,8 @@ class MainViewController: UIViewController {
             self?.tableView.reloadData()
         }
         
+        viewModel.searchFilm(with: "up")
+        
     }
 
 }
@@ -41,7 +43,7 @@ class MainViewController: UIViewController {
 private extension MainViewController {
     
     func initializeTableView() {
-        
+        tableView.registerCell(BaseFilmInformationCell.self)
         
         dataSource = TableViewDataSource()
         tableView.delegate = dataSource

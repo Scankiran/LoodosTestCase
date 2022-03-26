@@ -8,13 +8,15 @@
 import Foundation
 
 class MainViewModel {
- 
+    private let network = FilmAPINetwork()
+    
     var sendDataToView: (([BaseFilmModel]) -> ())?
     
     func searchFilm(with text:String) {
-        let network = FilmAPINetwork()
         network.searchFilm(with: text) { [weak self] filmData in
-            self?.sendDataToView?(filmData.search)
+            if let filmData = filmData.search {
+                self?.sendDataToView?(filmData)
+            }
         }
     }
 }

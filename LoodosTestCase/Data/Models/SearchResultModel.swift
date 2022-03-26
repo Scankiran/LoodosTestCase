@@ -8,20 +8,24 @@
 import Foundation
 
 struct SearchResultModel: Codable {
-    let search: [BaseFilmModel]
-    let totalResults: String
+    let search: [BaseFilmModel]?
+    let totalResults: String?
     let response: String
+    let error: String?
 
     enum CodingKeys: String, CodingKey {
         case search = "Search"
         case totalResults
         case response = "Response"
+        case error = "Error"
     }
 }
 
 // MARK: - BaseFilmModel
 struct BaseFilmModel: Codable {
-    let title, year, imdbID: String
+    let title: String
+    let year: String
+    let imdbID: String
     let type: TypeEnum
     let poster: String
 

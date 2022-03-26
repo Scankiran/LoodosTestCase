@@ -22,6 +22,8 @@
 		2CB1E00D27EF0184007A7A76 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E00C27EF0184007A7A76 /* TableViewDataSource.swift */; };
 		2CB1E01127EF0229007A7A76 /* CustomGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01027EF0229007A7A76 /* CustomGestureHandler.swift */; };
 		2CB1E01327EF0231007A7A76 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01227EF0231007A7A76 /* BaseTableViewCell.swift */; };
+		2CB1E01627EF046B007A7A76 /* BaseFilmInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */; };
+		2CB1E01727EF046B007A7A76 /* BaseFilmInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */; };
 		2CF25D8227ED07A100277678 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */; };
 		2CF25D8727ED134A00277678 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8627ED134A00277678 /* Reachability.swift */; };
 		2CF25D8A27ED15E600277678 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF25D8827ED15E600277678 /* MainViewController.swift */; };
@@ -46,6 +48,8 @@
 		2CB1E00C27EF0184007A7A76 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		2CB1E01027EF0229007A7A76 /* CustomGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGestureHandler.swift; sourceTree = "<group>"; };
 		2CB1E01227EF0231007A7A76 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFilmInformationCell.swift; sourceTree = "<group>"; };
+		2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseFilmInformationCell.xib; sourceTree = "<group>"; };
 		2CF25D8127ED07A100277678 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
 		2CF25D8627ED134A00277678 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2CF25D8827ED15E600277678 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				2C4B726027EC72BA0055B1F8 /* App */,
-				2C4B726227EC72F60055B1F8 /* Data */,
 				2C4B726127EC72E10055B1F8 /* Resource */,
+				2C4B726227EC72F60055B1F8 /* Data */,
 				2C4B726327EC73270055B1F8 /* Views */,
 				2CB1E00F27EF020D007A7A76 /* Components */,
 			);
@@ -204,6 +208,8 @@
 		2CB1E00B27EF0173007A7A76 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2CB1E01427EF046B007A7A76 /* BaseFilmInformationCell.swift */,
+				2CB1E01527EF046B007A7A76 /* BaseFilmInformationCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 				2CF25D8B27ED15E600277678 /* MainViewController.xib in Resources */,
 				2C4B726A27EC73E70055B1F8 /* SplashViewController.xib in Resources */,
 				2C4B725627EC718D0055B1F8 /* Assets.xcassets in Resources */,
+				2CB1E01727EF046B007A7A76 /* BaseFilmInformationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +364,7 @@
 				2CB1E00227EEF43E007A7A76 /* FilmAPINetwork.swift in Sources */,
 				2CB1E01327EF0231007A7A76 /* BaseTableViewCell.swift in Sources */,
 				2CB1E01127EF0229007A7A76 /* CustomGestureHandler.swift in Sources */,
+				2CB1E01627EF046B007A7A76 /* BaseFilmInformationCell.swift in Sources */,
 				2CB1E00727EEFBFD007A7A76 /* SearchResultModel.swift in Sources */,
 				2CB1E00927EEFD77007A7A76 /* ErrorHandlerManager.swift in Sources */,
 				2CB1E00D27EF0184007A7A76 /* TableViewDataSource.swift in Sources */,
@@ -503,7 +511,7 @@
 			baseConfigurationReference = B4258D0018EF5CD5AB55545A /* Pods-LoodosTestCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
@@ -537,7 +545,7 @@
 			baseConfigurationReference = F090AC0D4412B037E62EDCA6 /* Pods-LoodosTestCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
