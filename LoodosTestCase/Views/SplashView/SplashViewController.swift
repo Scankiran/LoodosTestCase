@@ -21,6 +21,11 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         bindViewModel()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchDataFromConfig()
+    }
 
     // ViewModel Bind
     private func bindViewModel() {
@@ -37,7 +42,6 @@ class SplashViewController: UIViewController {
             self?.openMainViewController()
         }
         
-        fetchDataFromConfig()
     }
 
 }
