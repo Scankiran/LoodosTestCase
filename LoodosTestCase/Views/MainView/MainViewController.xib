@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="LoodosTestCase" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="nYV-H3-Z4q" id="Y0T-mD-o2J"/>
+                <outlet property="tableView" destination="GQR-Bl-n1G" id="ltf-zn-bkZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GQR-Bl-n1G">
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nYV-H3-Z4q">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nYV-H3-Z4q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NZk-23-Oww"/>
+                <constraint firstItem="nYV-H3-Z4q" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="PyE-Ol-Cb9"/>
+                <constraint firstItem="nYV-H3-Z4q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dEJ-zo-PgA"/>
+                <constraint firstItem="GQR-Bl-n1G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f7H-dr-AG8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GQR-Bl-n1G" secondAttribute="trailing" id="gQo-VI-920"/>
+                <constraint firstItem="GQR-Bl-n1G" firstAttribute="top" secondItem="nYV-H3-Z4q" secondAttribute="bottom" id="jQB-cs-dNh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GQR-Bl-n1G" secondAttribute="bottom" id="nZi-9T-ZJZ"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
