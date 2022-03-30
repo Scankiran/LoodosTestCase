@@ -12,16 +12,16 @@ class SplashViewModel {
     var showAlertOnView: ((String) -> ())?
     var sendDataToView: ((String) -> ())?
     var openMainViewController: (() -> ())?
-
     
+    // Fetch remote config
     func fetchKeyFromConfig() {
         let remoteConfig = RemoteConfigManager()
 
-        if let keyValue = remoteConfig.fetchStringValue(with: "SplashScreenKey") {
+        if let keyValue = remoteConfig.fetchStringValue(with: Constants.shared.splashScreenConfigKey) {
             self.sendDataToView?(keyValue)
             runTimerToPushMainView()
         } else {
-            self.showAlertOnView?("There was an error on fetching remote config.")
+            self.showAlertOnView?(Constants.shared.fetchConstantString(.errorRemoteConfig))
         }
     }
 
@@ -33,7 +33,7 @@ class SplashViewModel {
         if Reachability.isConnectedToNetwork() {
             return true
         } else {
-            self.showAlertOnView?("There is no connection. Check your connection.")
+            self.showAlertOnView?(Constants.shared.fetchConstantString(.connectionError))
             return false
         }
     }

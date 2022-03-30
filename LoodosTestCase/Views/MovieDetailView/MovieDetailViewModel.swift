@@ -10,7 +10,12 @@ import Foundation
 class MovieDetailViewModel {
     
     private lazy var network = MovieAPINetwork()
-    var movieID = ""
+    
+    var movieID = "" {
+        didSet {
+            fetchMovieDetail()
+        }
+    }
     
     var sendMovieDetailToView: ((DetailedMovieModel)->())?
     
